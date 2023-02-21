@@ -135,7 +135,6 @@ const NumericKeyboard = ({
         <View style={styles.keyboardRow}>
           <TouchableOpacity
             onPress={() => {
-              console.log(closeKeyboard);
               if (closeKeyboard) {
                 closeKeyboard();
               } else {
@@ -154,8 +153,8 @@ const NumericKeyboard = ({
                   style={{ width: 45, height: 45 }}
                   source={
                     theme === "dark"
-                      ? require("../../imagesv2/withdraw/chevron-down-white.png")
-                      : require("../../imagesv2/withdraw/chevron-down.png")
+                      ? require("./assests/chevron-down-white.png")
+                      : require("./assests/chevron-down.png")
                   }
                 ></Image>
               </View>
@@ -174,8 +173,8 @@ const NumericKeyboard = ({
             <Image
               source={
                 theme === "dark"
-                  ? require("../../imagesv2/wallet/backspace.png")
-                  : require("../../imagesv2/withdraw/backspace.png")
+                  ? require("./assests/backspace.png")
+                  : require("./assests/backspace-black.png")
               }
               style={{ width: 35, height: 35 }}
             ></Image>
