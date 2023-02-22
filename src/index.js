@@ -6,7 +6,7 @@ import { formatIndianCurrency } from "../../utils/formatIndianCurrency";
 const NumericKeyboard = ({
   setTextInput = () => {},
   setCursorSelection = () => {},
-  backgroundColor = "#4c56c0",
+  backgroundColor,
   keyTextColor = "white",
   textInput = "",
   theme = "dark",
@@ -60,11 +60,15 @@ const NumericKeyboard = ({
     fontWeight: "600",
   };
 
+  const keyboardBackgroundColor = theme === "dark" ? "black" : "white";
+
   return (
     <View
       style={{
         paddingVertical: 6,
-        backgroundColor: backgroundColor,
+        backgroundColor: backgroundColor
+          ? backgroundColor
+          : keyboardBackgroundColor,
         height: 250,
       }}
     >
