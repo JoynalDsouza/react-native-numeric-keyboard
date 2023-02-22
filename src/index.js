@@ -13,6 +13,7 @@ const NumericKeyboard = ({
   formatToCurrency = false,
   closeKeyboard,
   hideDoubleZeros = false,
+  numberkeyStyles = {},
 }) => {
   const handleKeyPress = (value) => {
     try {
@@ -73,20 +74,26 @@ const NumericKeyboard = ({
             onPress={() => handleKeyPress("1")}
             style={styles.keyboardKey}
           >
-            <TextView style={keyboardKeyTextStyle}>1</TextView>
+            <TextView style={[keyboardKeyTextStyle, numberkeyStyles]}>
+              1
+            </TextView>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => handleKeyPress("2")}
             style={styles.keyboardKey}
           >
-            <TextView style={keyboardKeyTextStyle}>2</TextView>
+            <TextView style={[keyboardKeyTextStyle, numberkeyStyles]}>
+              2
+            </TextView>
           </TouchableOpacity>
 
           <TouchableOpacity
             onPress={() => handleKeyPress("3")}
             style={styles.keyboardKey}
           >
-            <TextView style={keyboardKeyTextStyle}>3</TextView>
+            <TextView style={[keyboardKeyTextStyle, numberkeyStyles]}>
+              3
+            </TextView>
           </TouchableOpacity>
         </View>
 
@@ -95,19 +102,25 @@ const NumericKeyboard = ({
             onPress={() => handleKeyPress("4")}
             style={styles.keyboardKey}
           >
-            <TextView style={keyboardKeyTextStyle}>4</TextView>
+            <TextView style={[keyboardKeyTextStyle, numberkeyStyles]}>
+              4
+            </TextView>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => handleKeyPress("5")}
             style={styles.keyboardKey}
           >
-            <TextView style={keyboardKeyTextStyle}>5</TextView>
+            <TextView style={[keyboardKeyTextStyle, numberkeyStyles]}>
+              5
+            </TextView>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => handleKeyPress("6")}
             style={styles.keyboardKey}
           >
-            <TextView style={keyboardKeyTextStyle}>6</TextView>
+            <TextView style={[keyboardKeyTextStyle, numberkeyStyles]}>
+              6
+            </TextView>
           </TouchableOpacity>
         </View>
 
@@ -116,19 +129,25 @@ const NumericKeyboard = ({
             onPress={() => handleKeyPress("7")}
             style={styles.keyboardKey}
           >
-            <TextView style={keyboardKeyTextStyle}>7</TextView>
+            <TextView style={[keyboardKeyTextStyle, numberkeyStyles]}>
+              7
+            </TextView>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => handleKeyPress("8")}
             style={styles.keyboardKey}
           >
-            <TextView style={keyboardKeyTextStyle}>8</TextView>
+            <TextView style={[keyboardKeyTextStyle, numberkeyStyles]}>
+              8
+            </TextView>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => handleKeyPress("9")}
             style={styles.keyboardKey}
           >
-            <TextView style={keyboardKeyTextStyle}>9</TextView>
+            <TextView style={[keyboardKeyTextStyle, numberkeyStyles]}>
+              9
+            </TextView>
           </TouchableOpacity>
         </View>
 
@@ -145,7 +164,9 @@ const NumericKeyboard = ({
           >
             {!closeKeyboard ? (
               !hideDoubleZeros && (
-                <TextView style={keyboardKeyTextStyle}>{"00"}</TextView>
+                <TextView style={[keyboardKeyTextStyle, numberkeyStyles]}>
+                  {"00"}
+                </TextView>
               )
             ) : (
               <View>
@@ -164,7 +185,9 @@ const NumericKeyboard = ({
             onPress={() => handleKeyPress("0")}
             style={styles.keyboardKey}
           >
-            <TextView style={keyboardKeyTextStyle}>0</TextView>
+            <TextView style={[keyboardKeyTextStyle, numberkeyStyles]}>
+              0
+            </TextView>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => handleKeyPress("backspace")}
