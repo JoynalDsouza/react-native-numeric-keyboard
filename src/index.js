@@ -3,6 +3,19 @@ import { View, StyleSheet, TouchableOpacity, Image } from "react-native";
 import TextView from "./TextView";
 import { formatIndianCurrency } from "../../utils/formatIndianCurrency";
 
+const KeyBoardKey = ({ value, onPressHandler }) => {
+  return (
+    <TouchableOpacity
+      onPress={() => onPressHandler(value)}
+      style={styles.keyboardKey}
+    >
+      <TextView style={[keyboardKeyTextStyle, numberkeyStyles]}>
+        {value}
+      </TextView>
+    </TouchableOpacity>
+  );
+};
+
 const NumericKeyboard = ({
   setTextInput = () => {},
   setCursorSelection = () => {},
@@ -74,14 +87,6 @@ const NumericKeyboard = ({
     >
       <View style={{ justifyContent: "space-around" }}>
         <View style={styles.keyboardRow}>
-          <TouchableOpacity
-            onPress={() => handleKeyPress("1")}
-            style={styles.keyboardKey}
-          >
-            <TextView style={[keyboardKeyTextStyle, numberkeyStyles]}>
-              1
-            </TextView>
-          </TouchableOpacity>
           <TouchableOpacity
             onPress={() => handleKeyPress("2")}
             style={styles.keyboardKey}
