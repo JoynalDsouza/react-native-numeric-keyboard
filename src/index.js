@@ -1,6 +1,5 @@
 import React from "react";
 import { View, StyleSheet, TouchableOpacity, Image } from "react-native";
-import TextView from "./TextView";
 import { formatIndianCurrency } from "../../utils/formatIndianCurrency";
 
 const KeyBoardKey = ({ value, onPressHandler }) => {
@@ -9,9 +8,9 @@ const KeyBoardKey = ({ value, onPressHandler }) => {
       onPress={() => onPressHandler(value)}
       style={styles.keyboardKey}
     >
-      <TextView style={[keyboardKeyTextStyle, numberkeyStyles]}>
-        {value}
-      </TextView>
+      <View>
+        <Text style={[keyboardKeyTextStyle, numberkeyStyles]}>{value}</Text>
+      </View>
     </TouchableOpacity>
   );
 };
